@@ -6,9 +6,14 @@
     }
     
     body {
+        background-image: url('https://hips.hearstapps.com/hmg-prod/images/in-this-noaa-satellite-handout-image-shows-hurricane-news-photo-1030488212-1536602949.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         font-family: 'Arial', sans-serif;
-        background-color: #f0f0f0;
-        color: #333;
+        background-color: #000; /* Black background in case image fails to load */
+        color: #ffffff; /* White text for better contrast */
         line-height: 1.6;
     }
     
@@ -17,19 +22,18 @@
         width: 85%;
         margin: 0 auto;
     }
-     
-    .ash-container{
+    
+    .ash-container {
         margin-top: 50px;
     }
-
+    
     /* Header */
     header {
-        background-color: #005f73;
+        background-color: rgba(0, 95, 115, 0.8); /* Semi-transparent dark teal */
         padding: 20px 0;
         color: white;
     }
     
-
     header .logo h1 {
         font-size: 2.5rem;
         text-align: center;
@@ -56,103 +60,104 @@
         text-decoration: underline;
     }
     
-/* Hero Section */
-.ash-hero {
-    background-color: #008C6C;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.ash-hero h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.ash-hero p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-}
-
-/* Safety Tips Section */
-.ash-safety-tips {
-    padding: 60px 0;
-    background-color: #003f3f;
-    color: white;
-    text-align: center;
-}
-
-.ash-safety-tips h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #ffb703;
-}
-
-.ash-tips {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.ash-tip {
-    background-color: #1f3a3a;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ash-tip h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #ffb703;
-}
-
-.ash-tip p {
-    font-size: 1rem;
-}
-
-.ash-tip:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.ash-tip img {
-    display: none;
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 15px;
-}
-
-.ash-tip.active img {
-    display: block;
-}
-
-/* Footer */
-footer {
-    background-color: #005f73;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+    /* Hero Section */
+    .ash-hero {
+        background-color: rgba(0, 140, 108, 0.8); /* Semi-transparent green */
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+    }
+    
     .ash-hero h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        margin-bottom: 10px;
     }
-
+    
     .ash-hero p {
-        font-size: 1.2rem;
-    }
-
-    .ash-tip h3 {
         font-size: 1.5rem;
+        margin-top: 10px;
     }
-
+    
+    /* Safety Tips Section */
+    .ash-safety-tips {
+        padding: 60px 0;
+        background-color: rgba(0, 63, 63, 0.8); /* Semi-transparent dark green */
+        color: white;
+        text-align: center;
+    }
+    
+    .ash-safety-tips h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #ffb703;
+    }
+    
+    .ash-tips {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .ash-tip {
+        background-color: rgba(31, 58, 58, 0.9); /* Semi-transparent deep gray-green */
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .ash-tip h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #ffb703;
+    }
+    
     .ash-tip p {
         font-size: 1rem;
     }
-}
+    
+    .ash-tip:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .ash-tip img {
+        display: none;
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+    
+    .ash-tip.active img {
+        display: block;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: rgba(0, 95, 115, 0.8); /* Semi-transparent dark teal */
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .ash-hero h2 {
+            font-size: 2.5rem;
+        }
+    
+        .ash-hero p {
+            font-size: 1.2rem;
+        }
+    
+        .ash-tip h3 {
+            font-size: 1.5rem;
+        }
+    
+        .ash-tip p {
+            font-size: 1rem;
+        }
+    }
+    
