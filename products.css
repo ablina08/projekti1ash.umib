@@ -1,0 +1,103 @@
+body {
+        background-image: url('https://hips.hearstapps.com/hmg-prod/images/in-this-noaa-satellite-handout-image-shows-hurricane-news-photo-1030488212-1536602949.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Keeps it fixed while scrolling */
+      }
+      
+      
+      .second-header {
+        margin-top: 150px; /* Adjust according to your navbar height */
+        color: #ffff;
+    }
+    
+    .second-header p {
+        font-size: 20px; /* Adjust the size as needed */
+        font-weight: bold; /* Makes it stand out more */
+    }
+    
+    /* Product Section */
+    .ash-product-item {
+            margin-bottom: 30px;
+            color: #161616;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding-top: 60px;
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            text-align: center;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        .ash-text-success {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ffff;
+        }
+        
+        .ash-filter-section {
+            background-color: #f8f9fa;;
+            border-radius: 5px;
+        }
+        
+        
+        .ash-filter-section h4 {
+            font-size: 1.2rem;
+        }
+        
+        .form-control {
+            border-radius: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card {
+                margin: 0 auto;
+                width: 90%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .ash-header h1 {
+                font-size: 2rem;
+            }
+        
+            .ash-header p {
+                font-size: 1rem;
+            }
+        
+            .ash-filter-section {
+                display: none;
+            }
+    }
+    
+    .ash-mt-5 {
+        font-size: 20px;
+        color: #fcf8f8;
+    }
+    
+    .btn-success {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    
+    }
+    
