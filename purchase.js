@@ -8,7 +8,7 @@ const productData = {
     
     // Add event listener for the "Buy Now" button
     document.addEventListener("DOMContentLoaded", function () {
-        const buyNowButton = document.querySelector(".ash-btn");
+        const buyNowButton = document.getElementById("buyNowBtn");
     
         if (buyNowButton) {
             buyNowButton.addEventListener("click", function (event) {
@@ -30,8 +30,8 @@ const productData = {
     
         // Display cart items on the cart page
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        const cartItemsContainer = document.getElementById("cartItems");
-        const cartTotal = document.getElementById("cartTotal");
+        const cartItemsContainer = document.getElementById("ash-cartItems");
+        const cartTotal = document.getElementById("ash-cartTotal");
     
         if (cartItemsContainer && cartTotal) {
             if (cart.length > 0) {
@@ -61,25 +61,43 @@ const productData = {
             }
         }
     
-        // Checkout success message
-        const checkoutBtn = document.getElementById('checkoutBtn');
-        const successMessage = document.getElementById('successMessage');
+        // Handle "Complete Purchase" button
+        const completePurchaseBtn = document.getElementById("completePurchaseBtn");
+        const purchaseSuccessMessage = document.getElementById("purchaseSuccessMessage");
     
-        if (checkoutBtn && successMessage) {
-            // Initially hide the success message
-            successMessage.style.display = 'none';
+        if (completePurchaseBtn && purchaseSuccessMessage) {
+            purchaseSuccessMessage.style.display = "none";
     
-            // Event listener for the "Proceed to Checkout" button
-            checkoutBtn.addEventListener('click', function () {
-                // Show the success message when the button is clicked
-                successMessage.style.display = 'block';
+            completePurchaseBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+                purchaseSuccessMessage.textContent = "Submitted Successfully!";
+                purchaseSuccessMessage.style.display = "block";
     
-                // Optionally, you can hide the message after a few seconds (e.g., 5 seconds)
-                setTimeout(function () {
-                    successMessage.style.display = 'none';
-                }, 5000); // Message will disappear after 5 seconds
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    purchaseSuccessMessage.style.display = "none";
+                }, 5000);
             });
         }
+    
+        // Handle "Proceed to Checkout" button
+        const checkoutBtn = document.getElementById("ash-checkoutBtn");
+        const successMessage = document.getElementById("successMessage");
+    
+        if (checkoutBtn && successMessage) {
+            successMessage.style.display = "none";
+    
+            checkoutBtn.addEventListener("click", function () {
+                successMessage.textContent = "Thank you for your order!";
+                successMessage.style.display = "block";
+    
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = "none";
+                }, 5000);
+            });
+        }
+    });
     
         // Search functionality (placeholder)
         const searchInput = document.querySelector(".form-control");
@@ -121,5 +139,5 @@ const productData = {
                 }
             });
         }
-    });
+
     

@@ -1,11 +1,24 @@
+body {
+        background-image: url('https://openweather.co.uk/storage/app/media/uploaded-files/ow_storm.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Arial', sans-serif;
+        background-color: rgb(247, 244, 243);
+        color: #ffffff;
+        line-height: 1.6;
+        font-weight: bold;
+    }
+   
 /* Product Card Section */
 .ash-product-card {
         border: 1px solid #ddd;
         padding: 1rem;
         border-radius: 8px;
         text-align: center;
-        background-color: #f8f8f8;
-    }
+        background-color: #d4dddc;
+       } 
     
     .ash-product-image {
         max-width: 100%;
@@ -44,68 +57,17 @@
         font-size: 1.2rem;
     }
     
-    /* Responsive Design */
-    @media (max-width: 767px) {
-        .ash-product-card {
-            margin-bottom: 2rem;
-        }
-    
-        .ash-footer {
-            padding: 1rem;
-        }
-    }
-    
-    .ash-mt-5 {
-        margin-top: 5rem;
-    }
-    
-    .ash-mt-3 {
-        margin-top: 3rem;
-}
-/* Product Card Section */
-.ash-product-card {
-        border: 1px solid #ddd;
+    /* Success Message Styles */
+    #successMessage, #purchaseSuccessMessage {
+        display: none;
         padding: 1rem;
         border-radius: 8px;
+        background-color: #28a745;  /* Green background for success */
+        color: rgb(7, 7, 7);
+        font-weight: bold;
         text-align: center;
-        background-color: #f8f8f8;
-    }
-    
-    .ash-product-image {
-        max-width: 100%;
-        border-radius: 8px;
-    }
-    
-    .ash-product-title {
-        font-size: 1.8rem;
-        margin-top: 1rem;
-        font-weight: bold;
-    }
-    
-    .ash-product-description {
-        font-size: 1rem;
-        margin: 1rem 0;
-    }
-    
-    .ash-product-price {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #2c3e50;
-    }
-    
-    /* Payment Form Section */
-    .ash-form-label {
-        font-weight: bold;
-    }
-    
-    .ash-form-control {
-        border-radius: 5px;
-        margin-bottom: 1rem;
-    }
-    
-    .ash-btn {
-        width: 100%;
-        font-size: 1.2rem;
+        margin-top: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     
     /* Responsive Design */
@@ -125,4 +87,8 @@
     
     .ash-mt-3 {
         margin-top: 3rem;
+    }
+    
+    .ash-mt-5  {
+        padding-top: 50px;
     }

@@ -1,8 +1,19 @@
+body {
+        background-image: url('https://hips.hearstapps.com/hmg-prod/images/in-this-noaa-satellite-handout-image-shows-hurricane-news-photo-1030488212-1536602949.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Arial', sans-serif;
+        background-color: #000; /* Black background in case image fails to load */
+        color: #ffffff; /* White text for better contrast */
+        line-height: 1.6;
+}
 .navbar {
         padding: 0.5rem 1rem;
-    }
+ }
     
-    .navbar-brand {
+ .navbar-brand {
         font-size: 1.5rem;
         font-weight: bold;
         color: #fff;
@@ -30,60 +41,175 @@
         text-decoration: underline;
     }
     .carousel {
-            position: relative;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .list {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .item {
+        min-width: 100%;
+        background-size: cover;
+        background-position: center;
+        height: 400px; /* Adjust as needed */
+    }
+    
+    .arrows {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    
+    .arrows button {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    .arrows button:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .timeRunning {
+        position: absolute;
+        bottom: 0;
+        height: 4px;
+        background: #ff5f5f;
+        animation: run 3s linear infinite;
+    }
+    
+    @keyframes run {
+        from {
+            width: 0;
+        }
+        to {
             width: 100%;
-            overflow: hidden;
         }
-        
-        .list {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
+    }
+ 
+/* this is footer */
+footer {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: auto;
+        background-color: #2d2e33; /* Professional dark background */
+        color: white;
+        padding: 60px 10%;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding doesn't add extra width */
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0; /* Remove default padding for list */
+    }
+    
+    .ash-footer-col {
+        width: 25%; /* Four columns for desktop view */
+        margin-bottom: 20px;
+    }
+    
+    .ash-footer-col h4 {
+        position: relative;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 26px;
+        color: #f1bc0d; /* Highlighted title color */
+        text-transform: capitalize;
+    }
+    
+    .ash-footer-col h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        background-color: #27c0ac;
+        height: 2px;
+        width: 40px;
+    }
+    
+    ul li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    
+    ul li a {
+        display: block;
+        font-size: 25px;
+        text-transform: capitalize;
+        color: #bdb6b6;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    }
+    
+    ul li a:hover {
+        color: white;
+        padding-left: 5px; /* Add subtle hover effect */
+    }
+    
+    .links a {
+        display: inline-block;
+        height: 44px;
+        width: 44px;
+        color: white;
+        background-color: rgba(40, 130, 214, 0.8); /* Stylish button background */
+        margin: 0 8px 8px 0;
+        text-align: center;
+        line-height: 44px;
+        border-radius: 50%; /* Circular buttons */
+        transition: 0.3s ease-in-out;
+    }
+    
+    .links a:hover {
+        color: #4d4f55;
+        background-color: white;
+    }
+    
+    footer .ash-mt-3 {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 740px) {
+        .ash-footer-col {
+            width: 50%;
+            margin-bottom: 30px;
+            text-align: center;
         }
-        
-        .item {
-            min-width: 100%;
-            background-size: cover;
-            background-position: center;
-            height: 400px; /* Adjust as needed */
+    
+        .ash-footer-col h4::before {
+            all: unset; /* Remove the line under the title on small screens */
         }
-        
-        .arrows {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            z-index: 10;
+    }
+    
+    @media (max-width: 555px) {
+        .ash-footer-col {
+            width: 100%; /* Full width for each column on small screens */
         }
-        
-        .arrows button {
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .arrows button:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-        
-        .timeRunning {
-            position: absolute;
-            bottom: 0;
-            height: 4px;
-            background: #ff5f5f;
-            animation: run 3s linear infinite;
-        }
-        
-        @keyframes run {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
-        
+    }
+    /* Footer Styles */
+    footer {
+        background: #222;
+        color: white;
+        padding: 1rem o;
+        text-align: center;
+    }
+    
+    footer .ash-mt-3 p {
+        position: relative;
+        margin-left: 70px;
+        font-size: 1.1rem; /* Adjust font size if needed */
+    }       
