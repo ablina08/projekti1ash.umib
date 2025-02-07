@@ -1,12 +1,15 @@
 body {
-        background-image: url('https://hips.hearstapps.com/hmg-prod/images/in-this-noaa-satellite-handout-image-shows-hurricane-news-photo-1030488212-1536602949.jpg');
+        background-image: url('https://openweather.co.uk/storage/app/media/uploaded-files/ow_storm.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed; /* Keeps it fixed while scrolling */
-      }
-      
-      
+        background-attachment: fixed;
+        font-family: 'Arial', sans-serif;
+        background-color: rgb(247, 244, 243);
+        color: #ffffff;
+        line-height: 1.6;
+        font-weight: bold;
+    }
       .second-header {
         margin-top: 150px; /* Adjust according to your navbar height */
         color: #ffff;
