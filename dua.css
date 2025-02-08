@@ -1,0 +1,22 @@
+body {
+        background-image: url('https://openweather.co.uk/storage/app/media/uploaded-files/ow_storm.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+.ash-container {
+        position: fixed; /* Covers the entire viewport */
+        top: 0;
+        left: 0;
+        width: 100vw; /* Full width */
+        height: 100vh; /* Full height */
+        overflow: hidden; /* Prevents scrolling */
+    }
+    
+    .ash-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+    }
+    
