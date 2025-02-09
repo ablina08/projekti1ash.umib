@@ -1,19 +1,23 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
+document.getElementById('ash-contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent the form from submitting the default way
+
+    const name = document.getElementById('ash-name').value;
+    const email = document.getElementById('ash-email').value;
+    const message = document.getElementById('ash-message').value;
+    const responseMessage = document.getElementById('ash-response-message');
     
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        const responseMessage = document.getElementById('response-message');
+    // Ensure the response message div is visible
+    responseMessage.style.display = 'block';
     
-        if (name && email && message) {
-            responseMessage.innerHTML = `<p>Thank you, ${name}! Your message has been sent successfully.</p>`;
-            responseMessage.style.color = 'green';
-        } else {
-            responseMessage.innerHTML = `<p>Please fill in all the fields.</p>`;
-            responseMessage.style.color = 'red';
-        }
-    });
+    if (name && email && message) {
+        responseMessage.innerHTML = `<p>Thank you, ${name}! Your message has been sent successfully.</p>`;
+        responseMessage.style.color = 'green';
+    } else {
+        responseMessage.innerHTML = `<p>Please fill in all the fields.</p>`;
+        responseMessage.style.color = 'red';
+    }
+});
+
     
     //search placeholder open page when entered//
     document.addEventListener("DOMContentLoaded", function() {
